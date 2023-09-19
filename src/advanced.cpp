@@ -18,7 +18,7 @@ int Execute(unsigned int row, unsigned int column) {
   // Here, we redirect the output stream to the string stream.
   // By this way the output of PrintMap() would be stored in the string.
   // If you do not understand, you can try to compare it with freopen, which redirect the output stream to a file.
-  PrintMap();
+  PrintMap(result);
   std::cout.rdbuf(old_output_buffer);  // Restore the output buffer
   str = oss.str();                     // Read the output
   std::istringstream iss(str);         // Redirect the input to the string, which stores the output recently

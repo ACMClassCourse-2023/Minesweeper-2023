@@ -38,9 +38,9 @@ void InitGame() {
  * @details This function is designed to read the game map from stdin when playing the client's (or player's) role.
  * Since the client (or player) can only get the limited information of the game map, so if there is a 3 * 3 map as
  * above and only the block (2, 0) has been visited, the stdin would be
- *     ...
- *     12.
- *     01.
+ *     ???
+ *     12?
+ *     01?
  */
 void ReadMap() {
   // TODO (student): Implement me!

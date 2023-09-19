@@ -9,11 +9,11 @@ int main() {
     unsigned pos_y;
     std::cin >> pos_x >> pos_y;
     int result = VisitBlock(pos_x, pos_y);
-    PrintMap();
+    PrintMap(result);
     if (result != 0) {
+      ExitGame(result);
       break;
     }
   }
-  ExitGame();
   return 0;
 }
