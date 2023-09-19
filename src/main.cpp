@@ -1,7 +1,9 @@
+#include <iostream>
+
 #include "server.h"
 
 auto main() -> int {
-  ReadMap();
+  InitMap();
   while (true) {
     unsigned pos_x;
     unsigned pos_y;
