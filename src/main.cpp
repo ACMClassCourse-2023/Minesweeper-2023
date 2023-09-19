@@ -2,7 +2,7 @@
 
 #include "server.h"
 
-auto main() -> int {
+int main() {
   InitMap();
   while (true) {
     unsigned pos_x;
