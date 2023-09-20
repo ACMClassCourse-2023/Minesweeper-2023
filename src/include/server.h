@@ -1,6 +1,7 @@
 #ifndef SERVER_H
 #define SERVER_H
 
+#include <cstdlib>
 #include <iostream>
 
 /*
@@ -10,7 +11,8 @@
  * etc., you're free to modify this structure.
  */
 int rows; // The count of rows of the game map
-int columns; // The count of columns of the game map
+int columns;  // The count of columns of the game map
+int game_state; // The state of the game, 0 for continuing, 1 for winning, -1 for losing
 
 /**
  * @brief The definition of function InitMap()
@@ -51,14 +53,14 @@ void InitMap() {
  *
  * @param row The row coordinate (0-based) of the block to be visited.
  * @param column The column coordinate (0-based) of the block to be visited.
- * @return int
+ *
+ * @note You should edit the value of game_state in this function. Precisely, edit it to
  *    0  if the game continues after visit that block, or that block has already been visited before.
  *    1  if the game ends and the player wins.
  *    -1 if the game ends and the player loses.
  */
-int VisitBlock(unsigned int row, unsigned int column) {  
+void VisitBlock(unsigned int row, unsigned int column) {  
   // TODO (student): Implement me!
-  return 0;
 }
 
 /**
@@ -81,12 +83,11 @@ int VisitBlock(unsigned int row, unsigned int column) {
  *    1√1
  *    122
  *    01√
- *
- * @param result The result returned by VisitBlock(row, column).
+ * (You may find the global variable game_state useful when implementing this function.)
  *
  * @note Use std::cout to print the game map, especially when you want to try the advanced task!!!
  */
-void PrintMap(int result) {
+void PrintMap() {
   // TODO (student): Implement me!
 }
 
@@ -96,11 +97,10 @@ void PrintMap(int result) {
  * @details This function is designed to exit the game. 
  * It outputs a line according to the result, and a line of two integers, visit_count and step_count,
  * representing the number of blocks visited and the number of steps taken respectively.
- *
- * @param result The result returned by VisitBlock(row, column).
  */
-void ExitGame(int result) {
+void ExitGame() {
   // TODO (student): Implement me!
+  exit(0); // Exit the game immediately
 }
 
 #endif

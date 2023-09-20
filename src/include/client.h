@@ -7,6 +7,8 @@
 extern int rows;     // The count of rows of the game map
 extern int columns;  // The count of columns of the game map
 
+// You can not use any other external variables except for rows and columns.
+
 /**
  * @brief The definition of function Execute(int, int)
  *
@@ -16,9 +18,8 @@ extern int columns;  // The count of columns of the game map
  *
  * @param row The row coordinate (0-based) of the block to be visited.
  * @param column The column coordinate (0-based) of the block to be visited.
- * @return int The same as the return value of VisitBlock().
  */
-int Execute(unsigned int row, unsigned int column);
+void Execute(unsigned int row, unsigned int column);
 
 /**
  * @brief The definition of function InitGame()
@@ -51,12 +52,12 @@ void ReadMap() {
  *
  * @details This function is designed to decide the next step when playing the client's (or player's) role. Open up your
  * mind and make your decision here!
- *
- * @return std::pair<int, int>
  */
-std::pair<int, int> Decide() {
+void Decide() {
   // TODO (student): Implement me!
-  return std::make_pair(0, 0);
+  // while (true) {
+  //   Execute(0, 0);
+  // }
 }
 
 #endif

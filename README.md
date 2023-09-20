@@ -116,9 +116,8 @@ Minesweeper（扫雷）是我们熟悉的经典轻量级小游戏，作为老版
 首先，我们将读入游戏地图作为服务端代码的输入，用户端代码仅可以获知游戏地图的行数与列数；接下来，用户端代码不断发起 `Execute(row, column)` 指令（第一次将由输入数据代你发出，防止第一次就踩雷），即访问某一个方块并获得该访问后的地图情况，具体地，`Execute(row, column)` 函数的实现形如
 ```
 Execute(row, column):
-  result = VisitBlock(row, column)
-  ReadMap() from result of PrintMap(result)
-  return result
+  VisitBlock(row, column)
+  ReadMap() from result of PrintMap()
 ```
 因此，如你所见，你需要在 ReadMap 函数中读取有限的地图信息，并储存到一些全局变量中，随后根据这些地图信息做出下一步的决策，通过 `Execute` 再次发起决策。具体的代码结构逻辑可以参考 `advanced.cpp` 和 `client.cpp`，如果你不明白代码的实现方式，请立即询问助教！！！
 
