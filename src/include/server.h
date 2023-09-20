@@ -47,9 +47,9 @@ void InitMap() {
  *     ???
  * If you call VisitBlock(0, 2), VisitBlock(2, 0), VisitBlock(1, 2) instead, the return value of the last operation
  * would be 1 (game ends and the player wins), and the game map would be
- *     1√1
+ *     1@1
  *     122
- *     01√
+ *     01@
  *
  * @param row The row coordinate (0-based) of the block to be visited.
  * @param column The column coordinate (0-based) of the block to be visited.
@@ -80,9 +80,9 @@ void VisitBlock(unsigned int row, unsigned int column) {
  *    12?
  *    01?
  * If the player visits all blocks without mine and call PrintMap() after that, the stdout would be
- *    1√1
+ *    1@1
  *    122
- *    01√
+ *    01@
  * (You may find the global variable game_state useful when implementing this function.)
  *
  * @note Use std::cout to print the game map, especially when you want to try the advanced task!!!
