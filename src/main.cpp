@@ -4,6 +4,7 @@
 
 int main() {
   InitMap();
+  PrintMap();
   while (true) {
     unsigned pos_x;
     unsigned pos_y;
