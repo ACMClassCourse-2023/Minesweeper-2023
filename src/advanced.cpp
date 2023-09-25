@@ -10,7 +10,7 @@
  * @brief The implementation of function Execute
  * @details Use it only when trying advanced task. Do NOT modify it before discussing with TA.
  */
-void Execute(unsigned int row, unsigned int column) {
+void Execute(int row, int column) {
   std::string str;
   VisitBlock(row, column);
   if (game_state != 0) {

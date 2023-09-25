@@ -59,7 +59,7 @@ void InitMap() {
  *    1  if the game ends and the player wins.
  *    -1 if the game ends and the player loses.
  */
-void VisitBlock(unsigned int row, unsigned int column) {  
+void VisitBlock(int row, int column) {  
   // TODO (student): Implement me!
 }
 

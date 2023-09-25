@@ -19,7 +19,7 @@ extern int columns;  // The count of columns of the game map
  * @param row The row coordinate (0-based) of the block to be visited.
  * @param column The column coordinate (0-based) of the block to be visited.
  */
-void Execute(unsigned int row, unsigned int column);
+void Execute(int row, int column);
 
 /**
  * @brief The definition of function InitGame()

@@ -6,8 +6,8 @@ int main() {
   InitMap();
   PrintMap();
   while (true) {
-    unsigned pos_x;
-    unsigned pos_y;
+    int pos_x;
+    int pos_y;
     std::cin >> pos_x >> pos_y;
     VisitBlock(pos_x, pos_y);
     PrintMap();
