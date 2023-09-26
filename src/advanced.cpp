@@ -14,6 +14,7 @@ void Execute(int row, int column) {
   std::string str;
   VisitBlock(row, column);
   if (game_state != 0) {
+    // PrintMap(); // this line may help you debug
     ExitGame();
   }
   std::ostringstream oss;
@@ -27,13 +28,16 @@ void Execute(int row, int column) {
   str = oss.str();                     // Read the output
   std::istringstream iss(str);         // Redirect the input to the string, which stores the output recently
   std::streambuf *old_input_buffer = std::cin.rdbuf();
+  std::cin.rdbuf(iss.rdbuf());
   ReadMap();
   std::cin.rdbuf(old_input_buffer);
+  // PrintMap(); // These two lines may help you debug
+  // std::cout << std::endl;
 }
 
 int main() {
   InitMap();
-  std::cout << rows << " " << columns << std::endl;
+  // std::cout << rows << " " << columns << std::endl;
   InitGame();
   while (true) {
     Decide(); // Exit() will be called in this function
